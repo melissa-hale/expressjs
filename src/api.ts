@@ -18,12 +18,10 @@ app.get('/', (req, res) => {
 const api = express.Router();
 
 api.get('/hello', (req, res) => {
-  console.log(process.env)
   res.status(200).send({ message: 'hello world' });
 });
 
 api.get('/creds', (req, res) => {
-  console.log(process.env)
   res.status(200).send({ message: {pg_user: process.env.PGUSER, pg_pass: process.env.PGPASS} });
 });
 
