@@ -11,7 +11,6 @@ app.use(express.text({ type: 'text/html' }));
 
 // Healthcheck endpoint
 app.get('/', (req, res) => {
-  console.log(process.env)
   res.status(200).send({ status: 'ok' });
 });
 

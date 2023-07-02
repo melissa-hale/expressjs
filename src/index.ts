@@ -8,6 +8,9 @@ import { app } from './api';
 
 const port = process.env.PORT || 3333;
 
-app.listen(port, () =>
+app.set('port', port)
+app.set('host', '::');
+
+app.listen(app.get('port'), app.get('host'), () =>
   console.log(`API available on http://localhost:${port}`)
 );
